@@ -1,0 +1,25 @@
+{
+  "name": "todoapp",
+  "author": "azu",
+  "license": "MIT",
+  "private": true,
+  "version": "1.0.0",
+  "description": "TODO MVC like in ES2015",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha \"./final/final/test/*.js\"",
+    "e2e": "start-server-and-test start http://localhost:3000/README.md cy:run",
+    "start": "npx --yes @js-primer/local-server --port 3000",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome"
+  },
+  "devDependencies": {
+    "cypress": "^4.9.0",
+    "mocha": "^10.0.0",
+    "start-server-and-test": "^2.0.3"
+  }
+}
